@@ -1,0 +1,17 @@
+.gridLines {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+
+.flexCont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-content: flex-start;
+  z-index: 0;
+  width: 100%;
+}

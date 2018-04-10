@@ -1,0 +1,8 @@
+.playerFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 0px;
+    width: 100%;
+  }
