@@ -10,7 +10,7 @@
     // the two nested arrays then map to false and true respectively
     // *** I NEED TO SET THE FUNCTIONALITY OF THE CURRENT TILE TO STATE SO I CAN ADJUST WITH ROTATIONS ***
     // on rotation, i would splice the first or last index of the base array and append it to the other side
-let tiles = [
+const tiles = [
     {
         values:
             [

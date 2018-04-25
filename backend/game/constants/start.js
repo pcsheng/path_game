@@ -10,7 +10,7 @@
 */
 
 
-let start = [
+const start = [
     [1, 2, 0, false],
     [1, 5, 0, false],
     [2, 6, 1, false],

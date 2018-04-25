@@ -1,7 +1,7 @@
 // the board has identifiers for the tile itself at index 0, 1
 // index 2 is the current tile that is placed at that position
 
-let board = [
+const board = [
     [1, 1, []],
     [1, 2, []],
     [1, 3, []],
