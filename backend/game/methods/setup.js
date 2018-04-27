@@ -1,18 +1,3 @@
-// responsible for shuffling the tiles array to form a deck 
-function shuffle(deckArr){
-    let currentIndex = deckArr.length, randomIndex, placeholder;
-    while (currentIndex){
-        // interesting to note here that even though currentIndex is fed in with --
-        // into another operation, the function still knows to change its value with each loop
-        randomIndex = Math.floor(Math.random() * currentIndex--);
-
-        placeholder = deckArr[currentIndex];
-        deckArr[currentIndex] = deckArr[randomIndex];
-        deckArr[randomIndex] = placeholder;
-    }
-    return deckArr;
-};
-
 // this function is responsible to creating the game object
 // **************** making this into a class for sure *******************
 function setup(){
