@@ -1,9 +1,17 @@
-import { isNumber } from "util";
+const board = require("./game/constants/board");
 
-let cool = [1,2,3,4]
 
-cool = cool.unshift(2)
+console.log(board);
 
-console.log(cool)
+const a = Object.assign([], board);
+const b = Object.assign()
 
-console.log(Number(1));
+console.log(board);
+console.log(a);
+console.log(b);
+
+a[0] = true;
+
+
+console.log(a[0]);
+console.log(b[0]);

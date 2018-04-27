@@ -46,6 +46,7 @@ function startPos(whichGame){
     }
 }
 
+// handles sockets disconnecting from the room
 function leaveGame(whichSocket, whichGame){
     // adds the player's current hand back into the deck
     let removedCards = currentGames.games[whichGame].players[whichSocket][1].splice(0, currentGames.games[whichGame].players[whichSocket][1].length);
