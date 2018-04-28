@@ -6,7 +6,8 @@ const getAffectedPlayers = (state) => ({
     getAffectedPlayers: (boardIndex) => {
         let affectedPlayers = [];
         for (playerId in state.playerPositions) {
-            if (getBoardIndex(state)(playerId) === boardIndex) {
+            // this should work, the module returns an object with boardIndex key returning a function value
+            if (getBoardIndex(state).boardIndex(playerId) === boardIndex) {
                 affectedPlayers.push(playerId)
             }
         }
