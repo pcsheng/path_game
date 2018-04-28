@@ -1,6 +1,6 @@
 // responsible for shuffling the tiles array to form a deck 
-const shuffle = (state) => ({
-    shuffle: () => {
+const deckShuffle = (state) => ({
+    deckShuffle: () => {
         let currentIndex = state.deck.length,
             randomIndex,
             placeholder;
@@ -16,4 +16,4 @@ const shuffle = (state) => ({
     }
 });
 
-module.exports = shuffle;
+module.exports = deckShuffle;

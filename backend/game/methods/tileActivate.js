@@ -1,6 +1,6 @@
 // this function is used to process tile data and translate it into a move
-const activateTile = (state) => ({
-    activateTile: (socketId, position = null) => {
+const tileActivate = (state) => ({
+    tileActivate: (socketId, position = null) => {
         if (state.deck.length) {
             switch (position) {
                 case null:
@@ -13,7 +13,7 @@ const activateTile = (state) => ({
     }
 });
 
-module.exports = activateTile;
+module.exports = tileActivate;
 
 
 

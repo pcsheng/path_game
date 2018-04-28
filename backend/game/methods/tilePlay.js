@@ -1,6 +1,6 @@
 // responsible for playing a tile from a player's hand
-const play = (state) => ({
-    play: (playIndex) => {
+const tilePlay = (state) => ({
+    tilePlay: (playIndex) => {
         // this is the index on the board array that needs the tile added to
         const boardIndex = (state.playerPositions[state.activePlayer][0] * 6) + state.playerPositions[state.activePlayer][1];
 
@@ -9,4 +9,4 @@ const play = (state) => ({
     }
 });
 
-module.exports = play;
+module.exports = tilePlay;
