@@ -11,14 +11,14 @@
 
 
 const start = [
-    [1, 2, 0, false],
-    [1, 5, 0, false],
-    [2, 6, 1, false],
-    [5, 6, 1, false],
-    [6, 5, 2, false],
-    [6, 2, 2, false],
-    [5, 1, 3, false],
-    [2, 1, 3, false],
+    [0, 1, 0, false],
+    [0, 4, 0, false],
+    [1, 5, 1, false],
+    [4, 5, 1, false],
+    [5, 4, 2, false],
+    [5, 1, 2, false],
+    [4, 0, 3, false],
+    [1, 0, 3, false],
 ];
 
 module.exports = start;
