@@ -32,11 +32,7 @@ const tiles = [
                 ]
             ],
         position: 0,
-        tileId: 1,
-        // the applied values don't do anything at the moment,
-        // the idea behind them is that i wanted some way to select a tile
-        // without playing them but i don't have the time for that shit
-        applied: false
+        tileId: 1
     },
     {
         values:
@@ -59,8 +55,7 @@ const tiles = [
                 ]
             ],
         position: 0,
-        tileId: 2,
-        applied: false
+        tileId: 2
     },
     {
         values:
@@ -80,779 +75,746 @@ const tiles = [
                 [
                     [2, false],
                     [1, false]
+                ]
+            ],
+        position: 0,
+        tileId: 3
+    },
+    {
+        values:
+            [
+                [
+                    [3, false],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [1, false]
+                ]
+            ],
+        position: 0,
+        tileId: 4
+    },
+    {
+        values:
+            [
+                [
+                    [3, true],
+                    [3, true]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [1, true],
+                    [1, true]
+                ]
+            ],
+        position: 0,
+        tileId: 5
+    },
+    {
+        values:
+            [
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [2, false],
+                    [2, false]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [2, false],
+                    [2, false]
+                ]
+            ],
+        position: 0,
+        tileId: 6
+    },
+    {
+        values:
+            [
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [2, true],
+                    [2, true]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [2, true],
+                    [2, true]
+                ]
+            ],
+        position: 0,
+        tileId: 7
+    },
+    {
+        values:
+            [
+                [
+                    [3, true],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [2, true]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [1, true],
+                    [2, true]
+                ]
+            ],
+        position: 0,
+        tileId: 8
+    },
+    {
+        values:
+            [
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [2, true],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [1, true]
+                ],
+                [
+                    [2, true],
+                    [3, true]
+                ]
+            ],
+        position: 0,
+        tileId: 9
+    },
+    {
+        values:
+            [
+                [
+                    [3, true],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [1, true]
+                ],
+                [
+                    [1, true],
+                    [3, true]
+                ]
+            ],
+        position: 0,
+        tileId: 10
+    },
+    {
+        values:
+            [
+                [
+                    [1, true],
+                    [3, false]
+                ],
+                [
+                    [3, true],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [1, true]
+                ],
+                [
+                    [1, false],
+                    [3, true]
+                ]
+            ],
+        position: 0,
+        tileId: 11
+    },
+    {
+        values:
+            [
+                [
+                    [1, true],
+                    [3, false]
+                ],
+                [
+                    [3, true],
+                    [2, true]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [1, false],
+                    [2, true]
+                ]
+            ],
+        position: 0,    
+        tileId: 12
+    },
+    {
+        values:
+            [
+                [
+                    [1, true],
+                    [3, true]
+                ],
+                [
+                    [3, true],
+                    [2, false]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [2, false],
+                    [1, true]
+                ]
+            ],
+        position: 0,
+        tileId: 13
+    },
+    {
+        values:
+            [
+                [
+                    [1, false],
+                    [3, true]
+                ],
+                [
+                    [2, true],
+                    [3, false]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [2, true],
+                    [1, true]
+                ]
+            ],
+        position: 0,
+        tileId: 14
+    },
+    {
+        values:
+            [
+                [
+                    [1, false],
+                    [3, false]
+                ],
+                [
+                    [2, false],
+                    [3, false]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [1, false],
+                    [2, false]
+                ]
+            ],
+        position: 0,
+        tileId: 15
+    },
+    {
+        values:
+            [
+                [
+                    [1, false],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [3, false]
+                ],
+                [
+                    [1, false],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [3, false]
+                ]
+            ],
+        position: 0,
+        tileId: 16
+    },
+    {
+        values:
+            [
+                [
+                    [1, false],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [3, false]
+                ],
+                [
+                    [1, true],
+                    [1, true]
+                ],
+                [
+                    [3, true],
+                    [3, true]
+                ]
+            ],
+        position: 0,
+        tileId: 17
+    },
+    {
+        values:
+            [
+                [
+                    [2, true],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [2, false]
+                ],
+                [
+                    [2, true],
+                    [1, true]
+                ],
+                [
+                    [2, false],
+                    [3, true]
+                ]
+            ],
+        position: 0,
+        tileId: 18
+    },
+    {
+        values:
+            [
+                [
+                    [2, true],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [2, true]
+                ],
+                [
+                    [2, true],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [2, true]
+                ]
+            ],
+        position: 0,
+        tileId: 19
+    },
+    {
+        values:
+            [
+                [
+                    [2, false],
+                    [3, true]
+                ],
+                [
+                    [0, false],
+                    [0, false]
+                ],
+                [
+                    [1, true],
+                    [2, false]
+                ],
+                [
+                    [3, true],
+                    [1, true]
+                ]
+            ],
+        position: 0,
+        tileId: 20
+    },
+    {
+        values:
+            [
+                [
+                    [2, false],
+                    [3, false]
+                ],
+                [
+                    [2, false],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [2, false]
+                ],
+                [
+                    [1, false],
+                    [2, false]
+                ]
+            ],
+        position: 0,
+        tileId: 21
+    },
+    {
+        values:
+            [
+                [
+                    [2, false],
+                    [1, false]
+                ],
+                [
+                    [3, false],
+                    [2, true]
+                ],
+                [
+                    [1, true],
+                    [2, false]
+                ],
+                [
+                    [3, true],
+                    [2, true]
+                ]
+            ],
+        position: 0,
+        tileId: 22
+    },
+    {
+        values:
+            [
+                [
+                    [2, false],
+                    [1, true]
+                ],
+                [
+                    [2, false],
+                    [3, true]
+                ],
+                [
+                    [1, true],
+                    [2, false]
+                ],
+                [
+                    [3, true],
+                    [2, false]
+                ]
+            ],
+        position: 0,
+        tileId: 23
+    },
+    {
+        values:
+            [
+                [
+                    [2, false],
+                    [1, true]
+                ],
+                [
+                    [2, true],
+                    [3, true]
+                ],
+                [
+                    [1, false],
+                    [2, false]
+                ],
+                [
+                    [2, true],
+                    [3, false]
+                ]
+            ],
+        position: 0,    
+        tileId: 24
+    },
+    {
+        values:
+            [
+                [
+                    [2, true],
+                    [1, true]
+                ],
+                [
+                    [2, true],
+                    [3, true]
+                ],
+                [
+                    [2, true],
+                    [1, true]
+                ],
+                [
+                    [2, true],
+                    [3, true]
+                ]
+            ],
+        position: 0,
+        tileId: 25
+    },
+    {
+        values:
+            [
+                [
+                    [1, true],
+                    [1, true]
+                ],
+                [
+                    [3, true],
+                    [3, true]
+                ],
+                [
+                    [1, true],
+                    [1, true]
+                ],
+                [
+                    [3, true],
+                    [3, true]
+                ]
+            ],
+        position: 0,
+        tileId: 26
+    },
+    {
+        values:
+            [
+                [
+                    [2, false],
+                    [2, false]
+                ],
+                [
+                    [2, false],
+                    [2, false]
+                ],
+                [
+                    [2, false],
+                    [2, false]
+                ],
+                [
+                    [2, false],
+                    [2, false]
+                ]
+            ],
+        position: 0,
+        tileId: 27
+    },
+    {
+        values:
+            [
+                [
+                    [2, false],
+                    [2, false]
+                ],
+                [
+                    [2, true],
+                    [2, true]
+                ],
+                [
+                    [2, false],
+                    [2, false]
+                ],
+                [
+                    [2, true],
+                    [2, true]
+                ]
+            ],
+        position: 0,
+        tileId: 28
+    },
+    {
+        values:
+            [
+                [
+                    [2, true],
+                    [2, true]
+                ],
+                [
+                    [2, true],
+                    [2, true]
+                ],
+                [
+                    [2, true],
+                    [2, true]
+                ],
+                [
+                    [2, true],
+                    [2, true]
+                ]
+            ],
+        position: 0,
+        tileId: 29
+    },
+    {
+        values:
+            [
+                [
+                    [1, false],
+                    [2, true]
+                ],
+                [
+                    [2, true],
+                    [3, false]
+                ],
+                [
+                    [1, false],
+                    [2, true]
+                ],
+                [
+                    [2, true],
+                    [3, false]
+                ]
+            ],
+        position: 0,
+        tileId: 30
+    },
+    {
+        values:
+            [
+                [
+                    [1, false],
+                    [2, true]
+                ],
+                [
+                    [2, false],
+                    [3, false]
+                ],
+                [
+                    [1, true],
+                    [2, true]
+                ],
+                [
+                    [3, true],
+                    [2, false]
+                ]
+            ],
+        position: 0,
+        tileId: 31
+    },
+    {
+        values:
+            [
+                [
+                    [1, true],
+                    [2, true]
+                ],
+                [
+                    [3, true],
+                    [2, true]
+                ],
+                [
+                    [1, true],
+                    [2, true]
+                ],
+                [
+                    [3, true],
+                    [2, true]
+                ]
+            ],
+        position: 0,
+        tileId: 32
+    },
+    {
+        values:
+            [
+                [
+                    [1, false],
+                    [3, false]
+                ],
+                [
+                    [1, true],
+                    [3, false]
+                ],
+                [
+                    [3, true],
+                    [1, true]
+                ],
+                [
+                    [1, false],
+                    [3, true]
+                ]
+            ],
+        position: 0,
+        tileId: 33
+    },
+    {
+        values:
+            [
+                [
+                    [3, true],
+                    [1, true]
+                ],
+                [
+                    [1, true],
+                    [3, true]
+                ],
+                [
+                    [3, true],
+                    [1, true]
+                ],
+                [
+                    [1, true],
+                    [3, true]
+                ]
+            ],
+        position: 0,
+        tileId: 34
+    },
+    {
+        values:
+            [
+                [
+                    [1, false],
+                    [3, false]
+                ],
+                [
+                    [1, false],
+                    [3, false]
+                ],
+                [
+                    [1, false],
+                    [3, false]
+                ],
+                [
+                    [1, false],
+                    [3, false]
                 ]
             ],
         position: 0,
         tileId: 3,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [3, false],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [1, false]
-                ]
-            ],
-        position: 0,
-        tileId: 4,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [3, true],
-                    [3, true]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [1, true],
-                    [1, true]
-                ]
-            ],
-        position: 0,
-        tileId: 5,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [2, false],
-                    [2, false]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [2, false],
-                    [2, false]
-                ]
-            ],
-        position: 0,
-        tileId: 6,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [2, true],
-                    [2, true]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [2, true],
-                    [2, true]
-                ]
-            ],
-        position: 0,
-        tileId: 7,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [3, true],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [2, true]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [1, true],
-                    [2, true]
-                ]
-            ],
-        position: 0,
-        tileId: 8,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [2, true],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [1, true]
-                ],
-                [
-                    [2, true],
-                    [3, true]
-                ]
-            ],
-        position: 0,
-        tileId: 9,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [3, true],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [1, true]
-                ],
-                [
-                    [1, true],
-                    [3, true]
-                ]
-            ],
-        position: 0,
-        tileId: 10,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, true],
-                    [3, false]
-                ],
-                [
-                    [3, true],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [1, true]
-                ],
-                [
-                    [1, false],
-                    [3, true]
-                ]
-            ],
-        position: 0,
-        tileId: 11,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, true],
-                    [3, false]
-                ],
-                [
-                    [3, true],
-                    [2, true]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [1, false],
-                    [2, true]
-                ]
-            ],
-        position: 0,    
-        tileId: 12,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, true],
-                    [3, true]
-                ],
-                [
-                    [3, true],
-                    [2, false]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [2, false],
-                    [1, true]
-                ]
-            ],
-        position: 0,
-        tileId: 13,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, false],
-                    [3, true]
-                ],
-                [
-                    [2, true],
-                    [3, false]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [2, true],
-                    [1, true]
-                ]
-            ],
-        position: 0,
-        tileId: 14,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, false],
-                    [3, false]
-                ],
-                [
-                    [2, false],
-                    [3, false]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [1, false],
-                    [2, false]
-                ]
-            ],
-        position: 0,
-        tileId: 15,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, false],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [3, false]
-                ],
-                [
-                    [1, false],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [3, false]
-                ]
-            ],
-        position: 0,
-        tileId: 16,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, false],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [3, false]
-                ],
-                [
-                    [1, true],
-                    [1, true]
-                ],
-                [
-                    [3, true],
-                    [3, true]
-                ]
-            ],
-        position: 0,
-        tileId: 17,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, true],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [2, false]
-                ],
-                [
-                    [2, true],
-                    [1, true]
-                ],
-                [
-                    [2, false],
-                    [3, true]
-                ]
-            ],
-        position: 0,
-        tileId: 18,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, true],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [2, true]
-                ],
-                [
-                    [2, true],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [2, true]
-                ]
-            ],
-        position: 0,
-        tileId: 19,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, false],
-                    [3, true]
-                ],
-                [
-                    [0, false],
-                    [0, false]
-                ],
-                [
-                    [1, true],
-                    [2, false]
-                ],
-                [
-                    [3, true],
-                    [1, true]
-                ]
-            ],
-        position: 0,
-        tileId: 20,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, false],
-                    [3, false]
-                ],
-                [
-                    [2, false],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [2, false]
-                ],
-                [
-                    [1, false],
-                    [2, false]
-                ]
-            ],
-        position: 0,
-        tileId: 21,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, false],
-                    [1, false]
-                ],
-                [
-                    [3, false],
-                    [2, true]
-                ],
-                [
-                    [1, true],
-                    [2, false]
-                ],
-                [
-                    [3, true],
-                    [2, true]
-                ]
-            ],
-        position: 0,
-        tileId: 22,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, false],
-                    [1, true]
-                ],
-                [
-                    [2, false],
-                    [3, true]
-                ],
-                [
-                    [1, true],
-                    [2, false]
-                ],
-                [
-                    [3, true],
-                    [2, false]
-                ]
-            ],
-        position: 0,
-        tileId: 23,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, false],
-                    [1, true]
-                ],
-                [
-                    [2, true],
-                    [3, true]
-                ],
-                [
-                    [1, false],
-                    [2, false]
-                ],
-                [
-                    [2, true],
-                    [3, false]
-                ]
-            ],
-        position: 0,    
-        tileId: 24,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, true],
-                    [1, true]
-                ],
-                [
-                    [2, true],
-                    [3, true]
-                ],
-                [
-                    [2, true],
-                    [1, true]
-                ],
-                [
-                    [2, true],
-                    [3, true]
-                ]
-            ],
-        position: 0,
-        tileId: 25,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, true],
-                    [1, true]
-                ],
-                [
-                    [3, true],
-                    [3, true]
-                ],
-                [
-                    [1, true],
-                    [1, true]
-                ],
-                [
-                    [3, true],
-                    [3, true]
-                ]
-            ],
-        position: 0,
-        tileId: 26,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, false],
-                    [2, false]
-                ],
-                [
-                    [2, false],
-                    [2, false]
-                ],
-                [
-                    [2, false],
-                    [2, false]
-                ],
-                [
-                    [2, false],
-                    [2, false]
-                ]
-            ],
-        position: 0,
-        tileId: 27,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, false],
-                    [2, false]
-                ],
-                [
-                    [2, true],
-                    [2, true]
-                ],
-                [
-                    [2, false],
-                    [2, false]
-                ],
-                [
-                    [2, true],
-                    [2, true]
-                ]
-            ],
-        position: 0,
-        tileId: 28,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [2, true],
-                    [2, true]
-                ],
-                [
-                    [2, true],
-                    [2, true]
-                ],
-                [
-                    [2, true],
-                    [2, true]
-                ],
-                [
-                    [2, true],
-                    [2, true]
-                ]
-            ],
-        position: 0,
-        tileId: 29,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, false],
-                    [2, true]
-                ],
-                [
-                    [2, true],
-                    [3, false]
-                ],
-                [
-                    [1, false],
-                    [2, true]
-                ],
-                [
-                    [2, true],
-                    [3, false]
-                ]
-            ],
-        position: 0,
-        tileId: 30,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, false],
-                    [2, true]
-                ],
-                [
-                    [2, false],
-                    [3, false]
-                ],
-                [
-                    [1, true],
-                    [2, true]
-                ],
-                [
-                    [3, true],
-                    [2, false]
-                ]
-            ],
-        position: 0,
-        tileId: 31,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, true],
-                    [2, true]
-                ],
-                [
-                    [3, true],
-                    [2, true]
-                ],
-                [
-                    [1, true],
-                    [2, true]
-                ],
-                [
-                    [3, true],
-                    [2, true]
-                ]
-            ],
-        position: 0,
-        tileId: 32,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, false],
-                    [3, false]
-                ],
-                [
-                    [1, true],
-                    [3, false]
-                ],
-                [
-                    [3, true],
-                    [1, true]
-                ],
-                [
-                    [1, false],
-                    [3, true]
-                ]
-            ],
-        position: 0,
-        tileId: 33,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [3, true],
-                    [1, true]
-                ],
-                [
-                    [1, true],
-                    [3, true]
-                ],
-                [
-                    [3, true],
-                    [1, true]
-                ],
-                [
-                    [1, true],
-                    [3, true]
-                ]
-            ],
-        position: 0,
-        tileId: 34,
-        applied: false
-    },
-    {
-        values:
-            [
-                [
-                    [1, false],
-                    [3, false]
-                ],
-                [
-                    [1, false],
-                    [3, false]
-                ],
-                [
-                    [1, false],
-                    [3, false]
-                ],
-                [
-                    [1, false],
-                    [3, false]
-                ]
-            ],
-        position: 0,
-        tileId: 35,
-        applied: false
     }
 ];
 

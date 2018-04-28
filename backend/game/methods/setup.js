@@ -9,17 +9,6 @@ function setup(){
     currentGames.gameCount++;
 };
 
-// deals the players their hands when the game starts
-function dealHands(whichGame){
-    let thisDeck = currentGames.games[whichGame].deck;
-    // console.log(thisDeck);
-    // console.log(currentGames.games[whichGame].players);
-    for (let thisPlayer in currentGames.games[whichGame].players){
-        currentGames.games[whichGame].players[thisPlayer][1].push(...thisDeck.splice(thisDeck.length-4, 3));
-    }
-    // console.log(thisDeck);
-}
-
 // randomly assigns sockets a starting position from the array
 function startPos(whichGame){
     // copies an array of starter positions
