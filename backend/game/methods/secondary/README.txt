@@ -1,0 +1,2 @@
+These functions are to be used by the main methods.
+They range from being simple functions I see multiple methods calling to very specific functions used for further abstraction on complicated methods.

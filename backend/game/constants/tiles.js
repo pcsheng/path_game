@@ -814,7 +814,7 @@ const tiles = [
                 ]
             ],
         position: 0,
-        tileId: 3,
+        tileId: 35
     }
 ];
 

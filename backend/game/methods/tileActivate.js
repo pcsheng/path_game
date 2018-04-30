@@ -1,15 +1,16 @@
+// get the boardIndex helper function
+const getBoardIndex = require("./secondary/boardIndex");
+const changeSide = require("./secondary/changeSide");
+
 // this function is used to process tile data and translate it into a move
 const tileActivate = (state) => ({
-    tileActivate: (socketId, position = null) => {
-        if (state.deck.length) {
-            switch (position) {
-                case null:
-                    state.playerHands[socketId].push(state.deck.pop());
-                    break;
-                default:
-                    state.playerHands[socketId][position] = state.deck.pop();
-            }
-        }
+    tileActivate: (playerId) => {
+        let boardIndex = getBoardIndex(state)(playerId);
+        const tileValue = state.board[boardIndex][2].values;
+
+        changeSide(state)(playerId, tileValue);
+
+
     }
 });
 
