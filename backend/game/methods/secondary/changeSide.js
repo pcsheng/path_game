@@ -14,7 +14,10 @@ const changeSide = (state) => (
         state.playerPositions[playerId][3] = playerSide;
 
         // uses the && operator in control flow so that the second expression evaluates only when condition is met
-        !applyValues[1] && (state.playerPositions[playerId][4] = !sideTf);
+            // at first glance this condition seems backwards, but the reason is that
+            // once tileActivate runs changeTile, the T/F value gets flipped AGAIN
+            // so in the grand scale of things, a change here means no change at all and vice versa
+        applyValues[1] && (state.playerPositions[playerId][4] = !sideTf);
     }
 );
 

@@ -1,6 +1,9 @@
+import { stat } from "fs";
+
 // get the boardIndex helper function
 const getBoardIndex = require("./secondary/boardIndex");
 const changeSide = require("./secondary/changeSide");
+const changeTile = require("./secondary/changeTile");
 
 // this function is used to process tile data and translate it into a move
 const tileActivate = (state) => ({
@@ -9,8 +12,7 @@ const tileActivate = (state) => ({
         const tileValue = state.board[boardIndex][2].values;
 
         changeSide(state)(playerId, tileValue);
-
-
+        changeTile(state)(playerId);
     }
 });
 
