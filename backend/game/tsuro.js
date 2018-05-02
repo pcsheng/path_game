@@ -1,7 +1,6 @@
 // game constants
 const tiles = require("./constants/tiles");
 const board = require("./constants/board");
-const start = require("./constants/start");
 
 // game methods
 const shuffle = require("./methods/shuffle");
