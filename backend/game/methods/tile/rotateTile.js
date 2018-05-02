@@ -1,8 +1,8 @@
 // this modifies the tile based on positional rotations before the play function
     // this function is here because it removes the inefficiency of adjusting original tile
     // based on position each time the tile gets activated
-const tileRotate = (state) => ({
-    tileRotate: (playIndex, position) => {     // the emit will feed in the position and the index from function
+const rotateTile = (state) => ({
+    rotateTile: (playIndex, position) => {     // the emit will feed in the position and the index from function
 
         // just in case some weird crap happens -- will also be validating on front end
         while (position > 3) {
@@ -18,6 +18,6 @@ const tileRotate = (state) => ({
     }
 });
 
-module.exports = tileRotate;
+module.exports = rotateTile;
 
 

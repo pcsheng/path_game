@@ -1,7 +1,7 @@
 // responsible for drawing a new tile from the deck
 // socketId can be fed manually -- mostly for game setup purposes
-const tileDraw = (state) => ({
-    tileDraw: (socketId = state.activePlayer, position = null) => {      // the position argument is here to specify where to insert the drawn tile
+const drawTile = (state) => ({
+    drawTile: (socketId = state.activePlayer, position = null) => {      // the position argument is here to specify where to insert the drawn tile
         if (state.deck.length) {
             switch (position) {
                 case null:
@@ -14,4 +14,4 @@ const tileDraw = (state) => ({
     }
 });
 
-module.exports = tileDraw;
+module.exports = drawTile;
