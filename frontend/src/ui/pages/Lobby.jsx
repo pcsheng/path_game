@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import LobbyList from '../components/LobbyList';
+import NewGame from '../components/NewGame';
 
 class Home extends Component{
 
   render(){
 
-    // const { lobbyData } = this.props;
-    const lobbyData = [{id:"123", players:2, status:"waiting"}, {id:"321", players:3, status:"playing"}];
+    const { lobby, newGame } = this.props;
 
-    // ***** need to declare lobby data before this *****
-    const listItems = lobbyData.map(({ id, players, status }) => {
+    const listItems = lobby.map(({ id, players, status }) => {
       return <Link to={"/games/" + id} className="collection-item" key={id} >ID: {id}<br/>Players: {players}/8<br/>Status: {status}</Link>
     });
 
@@ -21,6 +20,7 @@ class Home extends Component{
           <LobbyList>
             {listItems}
           </LobbyList>
+          <NewGame newGame={newGame} />
         </div>
       </div>
     )

@@ -3,7 +3,7 @@ import React from "react";
 import '../css/Header.css';
 
 const Header = () => (
-  <header className="flex-header" >
+  <header className="flex-header z-depth-2" >
     <span className="center-align" >
       <img src={"/assets/players/P1.svg"} className="header-content" />
       <p className="center-align" >You</p>

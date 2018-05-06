@@ -11,10 +11,10 @@ class Home extends Component{
       <div className="container center-align" >
         <div className="row">
           <HomeCard>
-            <Link to="/games">Play</Link>
+            <Link to="/games" style={{margin: 0}} >Play</Link> {/* could not use className here */}
           </HomeCard>
           <LearnCard>
-            <Link to="/rules">Learn</Link>
+            <Link to="/rules" style={{margin: 0}} >Learn</Link> {/* could not use className here */}
           </LearnCard>
         </div>
       </div>
