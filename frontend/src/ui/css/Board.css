@@ -5,3 +5,8 @@
 .fill-width {
   width: 100%;
 }
+
+.board-back {
+  width: 100%;
+  background-image: url(/assets/board2.svg);
+}
