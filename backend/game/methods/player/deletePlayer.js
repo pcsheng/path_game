@@ -12,8 +12,6 @@ const deletePlayer = (state) => ({
 
         // deletes the player from playerPositions
         delete state.playerPositions[playerId];
-
-        break;
     }
 });
 

@@ -2,9 +2,6 @@ const app = require('express')(),
       server = require('http').Server(app),
       // the wsEngine is a fix for windows UGH
       io = require('socket.io')(server, { wsEngine: 'ws' }),
-      socketioJwt = require('socketio-jwt'),
-      jwt = require('jsonwebtoken'),
-      jwtKey = require('./config.json')['jwt-key'],
       bodyParser = require('body-parser'),
       cors = require('cors');
 
@@ -12,47 +9,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-const tiles = JSON.parse(JSON.stringify(require('./tiles'))),
-      board = JSON.parse(JSON.stringify(require('./board'))),
-      start = JSON.parse(JSON.stringify(require('./start')));
-      
-
-// this array is going to contain all the ongoing games
-// each game will be an object in the array detailing stuff about the game
-// like a game id, board state, player hands, etc
-let currentGames = {gameCount: 0, games: {}};
-
-// this path is responsible for issuing JWT for users upon connecting
-app.post('/connect', (req, res)=>{
-    // the body is going to come with a name field
-    let token = jwt.sign({name: req.body.name, iat: Date.now()}, 
-                         jwtKey, 
-                         { expiresIn: '99y' });
-    res.json({token: token});
-});
-
-// i don't fully understand the handshake thing, so for now
-// going to use a separate api to handle the middleware auth stuff
-io.use(socketioJwt.authorize({
-    secret: jwtKey,
-    handshake: true
-}));
+// this is the main storage of the application state
+const manager = require("./manager/manager");
+let currentGames = manager();
 
 io.on('connection', (socket)=>{
-    // sets the player's selected name to their socket
-    jwt.verify(socket.handshake.query.token, jwtKey, (err, decoded)=>{
-        socket.playerName = decoded.name;
-    });
     // console.log(io.sockets.adapter.rooms);
-    // console.log('user connection');
+    console.log('user connection');
     // console.log(socket);
     socket.join('lobby');
-    socket.emit('gameData', Object.keys(currentGames.games));
+    socket.emit('lobbyData', currentGames.getLobby());
 
     socket.on('makeGame', (data)=>{
         console.log('make game');
-        setup();
-        io.in('lobby').emit('gameData', Object.keys(currentGames.games));
+        currentGames.newGame();
+        io.in('lobby').emit('lobbyData', currentGames.getLobby());
     });
 
     socket.on('joinGame', (data)=>{
@@ -85,7 +56,7 @@ io.on('connection', (socket)=>{
             }
         }
         socket.join('lobby');
-        io.to(socket.id).emit('gameData', Object.keys(currentGames.games));
+        io.to(socket.id).emit('lobbyData', Object.keys(currentGames.games));
     })
 
     socket.on('startGame', (data)=>{
