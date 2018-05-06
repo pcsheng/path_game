@@ -1,0 +1,12 @@
+.flex-header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
+  padding: 0px;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: coral;
+}

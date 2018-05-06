@@ -8,13 +8,15 @@ class Home extends Component{
 
   render(){
     return (
-      <div className="row">
-        <HomeCard>
-          <Link to="/games">Play</Link>
-        </HomeCard>
-        <LearnCard>
-          <Link to="/rules">Learn</Link>
-        </LearnCard>
+      <div className="container center-align" >
+        <div className="row">
+          <HomeCard>
+            <Link to="/games">Play</Link>
+          </HomeCard>
+          <LearnCard>
+            <Link to="/rules">Learn</Link>
+          </LearnCard>
+        </div>
       </div>
     )
   }
