@@ -16,10 +16,10 @@ class App extends Component {
       hand: [],
       playerNumber: ""
     }
+    this.socket = io('http://localhost:8080/');
   }
 
   componentDidMount() {
-    this.socket = io('http://localhost:8080/');
     this.socket.on('lobbyData', (data)=>{
       this.setState({
         lobby: data
@@ -55,14 +55,24 @@ class App extends Component {
     this.socket.emit('joinLobby');
   }
 
+  // leaves the lobby
+  leaveLobby = () => {
+    this.socket.emit('leaveLobby');
+  }
+
   // makes a game
   newGame = () => {
     this.socket.emit('makeGame');
   }
 
   // joins a game
-  joinGame = (whichGame) => {
-    this.socket.emit('joinGame', whichGame);
+  joinGame = (gameId) => {
+    this.socket.emit('joinGame', gameId);
+  }
+
+  // leaves a game
+  leaveGame = (gameId) => {
+    this.socket.emit('leaveGame', gameId);
   }
 
   render() {
@@ -75,8 +85,11 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/games" render={(props) => <Lobby {...props} 
                                                                lobby={lobby}
-                                                               joinLobby={this.joinLobby} 
-                                                               newGame={this.newGame} />} />
+                                                               joinLobby={this.joinLobby}
+                                                               leaveLobby={this.leaveLobby}
+                                                               newGame={this.newGame}
+                                                               joinGame={this.joinGame}
+                                                               leaveGame={this.leaveGame} />} />
           <Route path="/games/:gameId" component={Game} />
         </Switch>
       </div>
